@@ -1,0 +1,10 @@
+archive/
+build/
+logs/
+__pycache__/
+venv/
+src/*/
+*.rar
+*.docx
+*.doc
+*.env

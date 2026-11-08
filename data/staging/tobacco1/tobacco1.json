@@ -1,0 +1,34 @@
+{
+	"username": "",
+	"dataset": "tobacco800",
+	"environment": {
+		"env_name": "Win7-DevMachine",
+		"cpu_model": "Intel(R) Core(TM) i7-2630QM",
+		"cpu_ghz": 2.00,
+		"ram_gb": 6.00,
+		"os_info": "Windows 7 Home",
+		"notes": "Local development machine"
+	},
+	"img_random_order": false,
+	"iter_count": 30,
+	"start_at": "2026-06-24 00:31:59",
+	"end_at": "2026-06-24 18:42:37",
+	"binaries": [
+		{
+			"lib_name": "FlyRLECCL",
+			"lib_version_tag": "v0.0.1-x64",
+			"compiler_flags": "-std=gnu99 -Wall -Wextra -Wpedantic -D__USE_MINGW_ANSI_STDIO=1 -O3 -DNDEBUG",
+			"git_commit_hash": "b6ca4f9",
+			"description": "flyrleccl_2d8c_inz_c16u_o32u_scalar_demo.exe",
+			"csv_name": "fly_benchmark_tobacco.csv"
+		},
+		{
+			"lib_name": "OpenCV",
+			"lib_version_tag": "v4.5.5-x64",
+			"compiler_flags": "-std=gnu99 -Wall -Wextra -Wpedantic -D__USE_MINGW_ANSI_STDIO=1 -O3 -DNDEBUG",
+			"git_commit_hash": "b6ca4f9",
+			"description": "fly_opencv_2d8c_demo.exe",
+			"csv_name": "opencv_benchmark_tobacco.csv"
+		}
+	]
+}

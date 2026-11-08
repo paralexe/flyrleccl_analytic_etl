@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flyrleccl-etl"
+version = "0.1.0"
+description = "Production-ready, fail-fast transactional ETL pipeline for benchmark data ingestion into PostgreSQL."
+readme = "README.md"
+requires-python = ">=3.8.3"
+license = { text = "MIT" }
+authors = [
+    { name = "Aleksei Parshukov" }
+]
+keywords = ["etl", "postgresql", "pydantic", "psycopg3", "benchmark", "computer-vision"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Database",
+    "Topic :: System :: Logging",
+]
+
+dependencies = [
+    "psycopg[binary,pool]>=3.1.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "loguru>=0.7.0",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+flyrleccl-etl = "main:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.8.3"
+strict = true

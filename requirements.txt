@@ -1,0 +1,12 @@
+# Core Dependencies
+psycopg[binary,pool]>=3.1.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+loguru>=0.7.0
+click>=8.1.0
+
+# Optional Development Tools (uncomment for local dev)
+# pytest>=7.0.0
+# black>=23.0.0
+# ruff>=0.1.0
+# mypy>=1.0.0
