@@ -1,4 +1,5 @@
 archive/
+data/archive/
 build/
 logs/
 __pycache__/

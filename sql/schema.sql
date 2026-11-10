@@ -501,6 +501,7 @@ BEGIN
 			vtokens.cold_start_length,
 			vtokens.hot_loop_length,
 			sl.stats_layout_id,
+			vtokens.stats_layout,
 			vtokens.cold_start_ms,
 			vtokens.hot_loop_avg_ms,
 			vtokens.best_time_ms,
@@ -568,7 +569,9 @@ BEGIN
 			SELECT 
 				*,
 				CASE 
-					WHEN ccl_validation_type = 'VERIFICATION' AND ccl_validation_status_id = 2 THEN TRUE
+					WHEN stats_layout <> 'SKIPPED'
+						AND ccl_validation_type = 'VERIFICATION'
+						AND ccl_validation_status_id = 2 THEN TRUE
 					ELSE FALSE
 				END AS trust_ccl_params
 			FROM tmp_data_lake lake

@@ -7,6 +7,10 @@ from src.parser import parse_json
 from src.data_validator import validate_csv_schema, validate_csv_data
 from src.loader import get_metrics_foreign_ids, load_data_to_db, finalize_etl
 from src.schemas import Benchmark
+#import os
+#os.environ["PGSSLCERT"] = ""
+#os.environ["PGSSLKEY"] = ""
+
 @click.command()
 @click.option(
 	'--source', 

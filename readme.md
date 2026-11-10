@@ -6,7 +6,7 @@
 [![psycopg3](https://img.shields.io/badge/psycopg-v3-336791?logo=postgresql&logoColor=white)](https://www.psycopg.org/psycopg3/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A high-performance, transactional ETL pipeline and relational data warehouse designed for computer vision algorithm benchmark evaluation (e.g., Connected Component Labeling / CCL libraries like **FlyRLECCL** and **OpenCV**).
+A high-performance, transactional ETL pipeline and relational data warehouse designed for CCL/CCA algorithm benchmark evaluation (e.g., Connected Component Labeling / CCL libraries like **FlyRLECCL** and **OpenCV**).
 
 The system adopts a **Fail-Fast architecture** with isolated benchmark bundles, multi-stage schema enforcement, and an in-database transformation pipeline triggered via PostgreSQL PL/pgSQL procedures.
 
@@ -115,6 +115,16 @@ $$\text{Cycles Per Pixel} = \frac{\text{Time (ms)} \times \text{CPU Clock (GHz)}
 
 ---
 
+## 📊 Tableau Performance Dashboard
+
+To provide a comprehensive visual evaluation, the aggregated data from the analytical view (`v_metrics_dashboard`) is published as an interactive dashboard. It delivers deep insights into algorithm efficiency, hardware hot-loop performance, and topological sensitivity across different image run compression ratios.
+
+👉 **[Explore Live Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/aleksei.parshukov/viz/CCLCCAPerformanceBenchmarkFlyRLECCLvsOpenCV/Dashboard1)**
+
+![Tableau Dashboard Preview](Dashboard_1.png)
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Prerequisites
@@ -183,7 +193,7 @@ pip install -r requirements.txt
 (Optional) Verify that all dependencies are installed correctly:
 
 ```bash
-python -c "import typer, psycopg, pydantic, pydantic_settings, loguru, click; print('Environment ready!')"
+python -c "import psycopg, pydantic, pydantic_settings, loguru, click; print('Environment ready!')"
 ```
 
 ### 3. Execute the Pipeline
